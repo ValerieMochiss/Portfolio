@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-2kxwTLmwnVIBGfz33W2V9DhTS5tDi7A5xUc7cPbI31Sji5hZbsw+8W1B8J2wFZ0G" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoPSffTlgY4CwZMd2bDHkw2szIU3H9MuqgFY4D7Llrx4e+" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="PortfolioIcon.png" alt="Portfolio Icon" class="logo-icon">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#Certifications">Certifications and Documents</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm Vanishwari. Aspiring to be a Data Analyst.</p>
+  </section>
+
+  <section id="about">
+      <h2>About Me</h2><br>
+      <img src="melove.jpg" alt="My Avatar">
+      <section id="about" class="text-center"></section>
+    <p class="about-text"> I’m a third-year Computer Science student majoring in Information Systems, aspiring to become a data analyst. My passion for working with data drives me to<br>
+      constantly explore new tools and techniques for uncovering insights.<br>
+      In my free time, I love reading and drawing, which not only spark my creativity but also give me fresh perspectives when tackling challenges.<br>
+      This blend of technical expertise and creative thinking shapes my approach to problem-solving.
+    </p>
+  </section>
+  
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="carousel-container">
+      <button class="arrow left-arrow" aria-label="Previous Slide" onclick="moveLeft()">&#8249;</button>
+      <div class="carousel">
+        <img src="mysql.jpg" alt="MySQL" class="carousel-item">
+        <img src="htmlcss.jpg" alt="HTML" class="carousel-item">
+        <img src="python.jpg" alt="Python" class="carousel-item">
+        <img src="microsoft.jpg" alt="Microsoft" class="carousel-item">
+        <img src="powerbi.jpg" alt="PowerBI" class="carousel-item">
+        <img src="java.jpg" alt="Java" class="carousel-item">
+        <img src="canva.jpg" alt="Canva" class="carousel-item">
+        <img src="figma.jpg" alt="Figma" class="carousel-item">
+      </div>
+      <button class="arrow right-arrow" aria-label="Next Slide" onclick="moveRight()">&#8250;</button>
+    </div>
+  </section>
+
+
+  <section id="Certifications">
+    <h2>Certifications and Documents</h2>
+    <p>Click on any document below to view or download!</p>
+    <div class="certificates-container">
+        <div class="certificate-card">
+            <h3>Resume</h3>
+            <button onclick="window.location.href='C:/xampp/htdocs/Vanishwari Official Intern Resume.pdf'">View</button>
+        </div>
+        <div class="certificate-card">
+            <h3>Academic Transcript</h3>
+            <button onclick="window.location.href='C:/xampp/htdocs/Vanishwari Pre Transcript Internship.pdf'">View</button>
+        </div>
+        <div class="certificate-card">
+            <h3>STPM Certificate</h3>
+            <button onclick="window.location.href='C:/xampp/htdocs/STPM Certificate.pdf'">View</button>
+        </div>
+        <div class="certificate-card">
+            <h3>SPM Certificate</h3>
+            <button onclick="window.location.href='C:/xampp/htdocs/SPM Cert.pdf'">View</button>
+        </div>
+        <div class="certificate-card">
+            <h3>MUET Certificate</h3>
+            <button onclick="window.location.href='C:/xampp/htdocs/MUET Cert.pdf'">View</button>
+        </div>
+        <div class="certificate-card">
+            <h3>ASEAN Data Science Explorer Certificate</h3>
+            <button onclick="window.location.href='C:/xampp/htdocs/ASEAN Data .pdf'">View</button>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="slideshow-container">
+      <!-- Slide 1 -->
+      <div class="mySlides">
+          <img src="BIDashboard.png" alt="Project 1">
+          <div class="text">A Power BI Dashboard was created based on marketing and sales data.</div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="mySlides">
+          <img src="LingScars.png" alt="Project 2">
+          <div class="text">Utilizing HTML, CSS, and PHP tools, the Lingscars website was enhanced.</div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="mySlides">
+          <img src="Kevsa.png" alt="Project 3">
+          <div class="text">A mental health app called Kevsa was designed using Figma.</div>
+      </div>
+
+      <!-- Slide 4 (Video) -->
+      <div class="mySlides">
+          <video width="640" height="360" controls>
+              <source src="LearningAppRecord.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="text">By using Java programming, an app catering to learning was developed.</div>
+      </div>
+  </div>
+  </section>
+  </section>
+  
+  <!-- The dots for navigation -->
+  <div style="text-align:center">
+      <span class="dot" onclick="showSlide(1)"></span>
+      <span class="dot" onclick="showSlide(2)"></span>
+      <span class="dot" onclick="showSlide(3)"></span>
+      <span class="dot" onclick="showSlide(4)"></span>
+  </div>
+</section>
+   
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me via email or connect with me on LinkedIn:</p>
+    <button onclick="document.location='https://www.linkedin.com/in/vanishwari-amarendran-54655b226/'">Connect through LinkedIn</button>
+    <button onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=vaniamar312@gmail.com'">Send Email</button>
+
+  </section>
+
+  <footer>
+    <p>© 2024 Vanishwari. All rights reserved.</p>
+  </footer>
+
+
+<script>
+
+  function showSlide(index) {
+    const slides = document.getElementsByClassName("mySlides");
+    const dots = document.getElementsByClassName("dot");
+
+    // Wrap around the index if it's out of bounds
+    if (index > slides.length) index = 1;
+    if (index < 1) index = slides.length;
+
+    // Hide all slides and remove "active" class from dots
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // Show the selected slide and mark the corresponding dot as active
+    slides[index - 1].style.display = "block";
+    dots[index - 1].className += " active";
+
+    // Update the global currentSlideIndex
+    currentSlideIndex = index;
+}
+
+// Add click event listeners to the dots
+const dots = document.getElementsByClassName("dot");
+for (let i = 0; i < dots.length; i++) {
+    dots[i].addEventListener("click", function() {
+        showSlide(i + 1); // Pass the 1-based index of the dot
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  showSlide(1);
+});
+
+  </script>
+
+<script>
+const carousel = document.querySelector('.carousel');
+const items = document.querySelectorAll('.carousel-item');
+const arrowLeft = document.querySelector('.left-arrow');
+const arrowRight = document.querySelector('.right-arrow');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  const offset = -currentIndex * 100; // Move to the correct slide
+  carousel.style.transform = `translateX(${offset}%)`;
+}
+
+function moveLeft() {
+  currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1; // Loop to the last item
+  updateCarousel();
+}
+
+function moveRight() {
+  currentIndex = (currentIndex + 1) % items.length; // Loop to the first item
+  updateCarousel();
+}
+</script>
+
+</body>
+</html>

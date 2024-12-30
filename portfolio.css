@@ -1,0 +1,368 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+/* Header */
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Align items vertically */
+  background: #bb699d;
+  color: white;
+  padding: 20px;
+  position: static;
+  top: 0;
+  z-index: 10;
+  width: 100%; /* Ensure it spans the full page width */
+  box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center; /* Align icon and text */
+}
+
+.logo-icon {
+  height: 25%; /* Adjust size */
+  width: 25%;
+  margin-right: 10px; /* Space between icon and text */
+  border-radius: 40%; /* Optional: make the icon circular */
+}
+
+/* Home Section */
+#home {
+  position: relative;
+  height: 100vh;
+  background: url('protprot.gif') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#home h1, #home p {
+  position: relative;
+  z-index: 2;
+  margin: 10px;
+}
+
+#home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px white;
+}
+
+#home p {
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px white;
+}
+
+/* Section Styling */
+section {
+  padding: 2rem;
+  color: white;
+  text-shadow: 0 1px 2px black;
+  text-align: justify;
+}
+
+#about {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;    /* Horizontally center */
+  text-align: center;     /* Ensure text is also centered */
+}
+
+#about img {
+  height: 180px; /* Adjust size as needed */
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px; /* Add spacing below the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.1); /* Zoom in slightly */
+  box-shadow: 0 8px 15px rgba(96, 94, 94, 0.2); /* Add a shadow effect */
+}
+
+nav {
+  flex-grow: 1; /* Allow nav to fill available space */
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #bb699d;
+}
+
+nav ul li {
+  padding: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, font-weight 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+  font-weight: bold;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+  background-color: #9e4c80;
+}
+
+/* Buttons */
+button {
+  margin: 10px;
+  background-color: palevioletred;
+  padding: 15px 20px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+button:hover {
+  background-color: #ff4081;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+
+/* Slideshow Container */
+.slideshow-container {
+  max-width: 50%; /* Define a consistent width */
+  margin: auto; /* Center align horizontally */
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+}
+
+
+.mySlides {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+
+mySlides:zoom {
+  transform: scale(1.05);
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+/* About Text */
+.about-text {
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.about-text:hover {
+  color: #da7cad;
+  transform: scale(1.05);
+  background-color: rgba(68, 68, 68, 0.601);
+}
+
+
+#skills {
+  text-align: center;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.carousel-container {
+  position: relative; /* Ensure the container is relatively positioned */
+  width: 100%; /* Adjust to your desired width */
+  max-width: 800px; /* Optional: Limit the maximum width */
+  margin: 0 auto;
+  overflow: hidden; /* Hide content outside the container */
+}
+
+.carousel {
+  display: flex; /* Use flexbox for horizontal layout */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for sliding */
+}
+
+.carousel img {
+  width: 100%; /* Make sure images fit the container */
+  max-width: 200px; /* Set a maximum width for the images */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure good scaling */
+  border-radius: 20%;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+.arrow {
+  position: absolute; /* Position arrows absolutely */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  background-color: rgba(0, 0, 0, 0.777); /* Background for visibility */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10; /* Ensure arrows are above other elements */
+}
+
+.left-arrow {
+  left: 10px; /* Position the left arrow */
+}
+
+.right-arrow {
+  right: 10px; /* Position the right arrow */
+}
+
+.text {
+  z-index: 2;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: #717171;
+}
+
+#Certifications {
+  text-align: center; /* Center text alignment */
+  padding: 2rem; /* Add padding */
+  background-color: black; /* Dark background to create contrast */
+  color: white; /* Text color */
+}
+
+.certificates-container {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center items horizontally */
+  gap: 2rem; /* Increased space between items */
+}
+
+.certificate-card {
+  background-color: #e75472; /* Card background color */
+  color: white; /* Text color */
+  padding: 2rem; /* Increased padding for a more spacious design */
+  border-radius: 15px; /* Larger rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow effect */
+  width: 250px; /* Increased width for better content display */
+  text-align: center; /* Center text inside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px); /* Stronger lift effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+  background-color: #d3495e; /* Slightly darker background on hover */
+}
+
+.certificate-card h3 {
+  font-size: 1.3rem; /* Slightly larger font size for the title */
+  margin-bottom: 1rem; /* More space below the title */
+  font-weight: bold; /* Bold font for the title */
+}
+
+.certificate-card p {
+  font-size: 1rem; /* Larger font for description */
+  margin-bottom: 1.5rem; /* Space between text and button */
+  font-style: italic; /* Italicize description for better emphasis */
+}
+
+.certificate-card button {
+  background-color: #bb699d; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 0.8rem 1.5rem; /* Larger button padding */
+  border-radius: 25px; /* More rounded button */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1rem; /* Larger font size for better readability */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.certificate-card button:hover {
+  background-color: #9e4c80; /* Darker background on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+
+#contact {
+  text-align: center;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#projects{
+  text-align: center;
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
